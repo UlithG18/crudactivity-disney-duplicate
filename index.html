@@ -17,8 +17,7 @@
             class="absolute right-0 top-0 h-2560 w-1440 object-cover" />
 
         <div class="absolute top-6 right-8 z-20">
-            <a href="pages/login.html" target="_blank"
-                class="border border-white px-4 py-1 text-sm bg-black hover:bg-white hover:text-black">
+            <a href="#" class="border border-white px-4 py-1 text-sm bg-black hover:bg-white hover:text-black">
                 LOGIN
             </a>
         </div>
@@ -37,13 +36,13 @@
                 <p class="text-sm text-gray-300 mb-2">
                     Enter your email to get started
                 </p><br>
-                <form class="flex mb-4">
-                    <input type="email" placeholder="Email" class="w-64 px-4 py-3 text-black">
-                    <button type="submit" class="bg-cyan-400 text-black px-6 py-3 hover:bg-cyan-500">
+                <div class="flex mb-4">
+                    <input id="inputEmail" type="email" placeholder="Email" class="w-64 px-4 py-3 text-black">
+                    <button id="registerBtn" class="bg-cyan-400 text-black px-6 hover:bg-cyan-500">
                         SUBSCRIBE TO ME NOW
                     </button>
-                </form>
-
+                </div>
+                <p id="WarningMsg"></p> <br>
                 <p class="text-sm text-gray-300 mb-2">
                     Save from 30% on Disney+ Premium Annual.
                 </p>
@@ -60,6 +59,7 @@
 
 
     </main>
+    <script src="Script/landing-page.js"></script>
 </body>
 
 </html>
