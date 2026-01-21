@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const createBtn = document.getElementById("createBtn");
+const errorMessage = document.getElementById('WarningMsg');
 
 function userCreate() {
     const userPass = document.getElementById("password").value;
-    const errorMessage = document.getElementById('WarningMsg');
 
     const termsCheck = document.getElementById("termsCheck").checked;
     const privacyCheck = document.getElementById("privacyCheck").checked;
