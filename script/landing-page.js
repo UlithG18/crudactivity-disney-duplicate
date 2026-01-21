@@ -1,10 +1,10 @@
 const loadUser = JSON.parse(localStorage.getItem('user')) || [];
 
 const registerBtn = document.getElementById("registerBtn");
+const loginBtn = document.getElementById("loginBtn")
 
 function userLogin() {
-
-    if (!loadUser && !loadUser.email && !loadUser.password) {
+    if (!loadUser.email && !loadUser.password) {
         console.log("You need to create an account first")
     } else {
         window.location.href = '../pages/login.html'
@@ -29,6 +29,11 @@ function userRegister() {
         window.location.href = '../pages/register.html'
     }
 }
+
+loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    userLogin()
+})
 
 registerBtn.addEventListener('click', (e) => {
     e.preventDefault();
