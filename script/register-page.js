@@ -15,8 +15,16 @@ function userCreate() {
     const userPass = document.getElementById("password").value;
     const errorMessage = document.getElementById('WarningMsg');
 
+    const termsCheck = document.getElementById("termsCheck").checked;
+    const privacyCheck = document.getElementById("privacyCheck").checked;
+
     if (!userPass) {
         errorMessage.textContent = "You need to enter a password";
+        return;
+    }
+
+    if (!termsCheck || !privacyCheck) {
+        errorMessage.textContent = "You must accept all required terms";
         return;
     }
 
@@ -24,7 +32,7 @@ function userCreate() {
     loadUser.password = userPass
 
     setUser(loadUser)
-    window.location.href = '/login.html'
+    window.location.href = '../pages/login.html'
 
 }
 
