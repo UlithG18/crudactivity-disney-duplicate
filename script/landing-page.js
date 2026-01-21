@@ -1,4 +1,5 @@
-const loadUser = JSON.parse(localStorage.getItem('user')) || [];
+const loadUser = JSON.parse(localStorage.getItem('user')) || {};
+
 
 const registerBtn = document.getElementById("registerBtn");
 const loginBtn = document.getElementById("loginBtn")
@@ -13,19 +14,20 @@ function userLogin() {
 
 function userRegister() {
     const userEmail = document.getElementById("inputEmail").value;
-    const actualUser = loadUser.Email === userEmail;
     const errorMessage = document.getElementById('WarningMsg');
 
     if (!userEmail) {
         errorMessage.textContent = "You need to enter an Email"
+        return;
     }
 
-    if (actualUser) {
+    if (loadUser.email === userEmail && loadUser.password) {
         errorMessage.innerHTML = `<p>You alredy have an account <a href="pages/login.html" class="text-sm underline">LOGIN</a> </p>`;
+        return;
     } else {
-        const user = { email: userEmail }
+        loadUser.email = userEmail
 
-        localStorage.setItem('user', JSON.stringify(user))
+        localStorage.setItem('user', JSON.stringify(loadUser))
         window.location.href = '../pages/register.html'
     }
 }

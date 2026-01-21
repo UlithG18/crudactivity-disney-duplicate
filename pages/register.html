@@ -34,48 +34,46 @@
             <a href="../index.html" class="text-blue-600 hover:underline text-xs">(edit)</a>
         </p>
 
-        <div class="mb-4">
-            <label class="block text-sm font-bold mb-1">Choose password</label>
-            <div class="relative">
-                <input type="password" class="w-full border rounded py-2" />
+        <form class="mb-4">
+            <label for="password" class="block text-sm font-bold mb-1">Choose password</label>
+            <input type="password" id="password" class="w-full border rounded py-2" />
+            <p id="WarningMsg" class="text-xs font-bold text-gray-500 mt-1">
+            </p><br>
+
+            <div class="space-y-3 text-xs mb-6">
+                <label class="flex items-start gap-2">
+                    <input type="checkbox" class="mt-1" required />
+                    <span>Yes, I would like to receive updates, special offers and other information from Disney+ and
+                        the
+                        Walt Disney Family of Companies.</span>
+                </label>
+
+                <label class="flex items-start gap-2">
+                    <input type="checkbox" class="mt-1" required />
+                    <span>Yes, I authorize The Walt Disney Company (Argentina) SA to share my data in order to receive
+                        updates, special offers and other information from Disney+ and the Walt Disney Family of
+                        Companies.</span>
+                </label>
             </div>
-            <p class="text-xs text-gray-500 mt-1">
-                At least six characters (distinguishes upper and lower case), including a special number or character.
+
+            <p class="text-xs text-gray-600 mb-6">
+                By clicking OK and continuing, you acknowledge that you read the
+                <a href="#" class="text-blue-600 hover:underline" target="_blank">Terms of use</a> and
+                <a href="#" class="text-blue-600 hover:underline" target="_blank">Cookies policy.</a>
+                Additionally, you authorize The Walt Disney Company (Argentina) SA to use your data in connection with
+                your
+                subscriptions to Disney services and, as described in the
+                <a href="#" class="text-blue-600 hover:underline" target="_blank">Privacy Policy</a>,
+                even share them with the Walt Disney Family of Companies. In the
+                <a href="#" class="text-blue-600 hover:underline" target="_blank">Privacy Policy</a> there is
+                more information about your rights and how to exercise
+                them.
             </p>
-        </div>
 
-        <div class="space-y-3 text-xs mb-6">
-            <label class="flex items-start gap-2">
-                <input type="checkbox" class="mt-1" />
-                <span>Yes, I would like to receive updates, special offers and other information from Disney+ and the
-                    Walt Disney Family of Companies.</span>
-            </label>
-
-            <label class="flex items-start gap-2">
-                <input type="checkbox" class="mt-1" />
-                <span>Yes, I authorize The Walt Disney Company (Argentina) SA to share my data in order to receive
-                    updates, special offers and other information from Disney+ and the Walt Disney Family of
-                    Companies.</span>
-            </label>
-        </div>
-
-        <p class="text-xs text-gray-600 mb-6">
-            By clicking OK and continuing, you acknowledge that you read the
-            <a href="#" class="text-blue-600 hover:underline" target="_blank">Terms of use</a> and
-            <a href="#" class="text-blue-600 hover:underline" target="_blank">Cookies policy.</a>
-            Additionally, you authorize The Walt Disney Company (Argentina) SA to use your data in connection with your
-            subscriptions to Disney services and, as described in the
-            <a href="#" class="text-blue-600 hover:underline" target="_blank">Privacy Policy</a>,
-            even share them with the Walt Disney Family of Companies. In the
-            <a href="#" class="text-blue-600 hover:underline" target="_blank">Privacy Policy</a> there is
-            more information about your rights and how to exercise
-            them.
-        </p>
-
-        <button id="createBtn" class="w-full bg-black text-white py-2 rounded hover:bg-gray-900">
-            Accept and continue
-        </button>
-
+            <input id="createBtn" type="submit" value="Accept and continue"
+                class="w-full bg-black text-white py-2 rounded hover:bg-gray-900">
+            </input>
+        </form>
         <div class="mt-6 text-center">
             <a href="#" class="text-sm text-blue-600 hover:underline">Learn more about MyDisney</a>
         </div>
