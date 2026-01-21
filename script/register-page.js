@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const loadUser = JSON.parse(localStorage.getItem('user')) || {};
     const emailPreView = document.getElementById("emailPv")
+    const loadUser = getUser()
+
     if (!loadUser.email) {
         console.log("You need to create an account first")
     } else {
@@ -19,12 +20,20 @@ function userCreate() {
         return;
     }
 
-
+    const loadUser = getUser()
     loadUser.password = userPass
 
-    localStorage.setItem('user', JSON.stringify(loadUser))
+    setUser(loadUser)
     window.location.href = '/login.html'
 
+}
+
+function getUser() {
+    return JSON.parse(localStorage.getItem("user")) || {};
+}
+
+function setUser(user) {
+    localStorage.setItem("user", JSON.stringify(user));
 }
 
 createBtn.addEventListener('click', (e) => {

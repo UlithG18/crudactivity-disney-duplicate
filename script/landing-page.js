@@ -1,6 +1,3 @@
-const loadUser = JSON.parse(localStorage.getItem('user')) || {};
-
-
 const registerBtn = document.getElementById("registerBtn");
 const loginBtn = document.getElementById("loginBtn")
 
@@ -13,6 +10,7 @@ function userLogin() {
 }
 
 function userRegister() {
+    const loadUser = getUser()
     const userEmail = document.getElementById("inputEmail").value;
     const errorMessage = document.getElementById('WarningMsg');
 
@@ -27,9 +25,17 @@ function userRegister() {
     } else {
         loadUser.email = userEmail
 
-        localStorage.setItem('user', JSON.stringify(loadUser))
+        setUser(loadUser)
         window.location.href = '../pages/register.html'
     }
+}
+
+function getUser() {
+    return JSON.parse(localStorage.getItem("user")) || {};
+}
+
+function setUser(user) {
+    localStorage.setItem("user", JSON.stringify(user));
 }
 
 loginBtn.addEventListener('click', (e) => {
