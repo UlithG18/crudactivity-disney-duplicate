@@ -12,8 +12,7 @@ function userRegister() {
     }
 
     if (actualUser) {
-        errorMessage.textContent = "You alredy have an account";
-        errorMessage.innerHTML = `<a href="pages/login.html" class="text-sm underline">View details of plans</a>`;
+        errorMessage.innerHTML = `<p>You alredy have an account <a href="pages/login.html" class="text-sm underline">Loging</a> </p>`;
     } else {
         const user = { Email: userEmail }
 
