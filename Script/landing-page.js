@@ -4,7 +4,7 @@ const registerBtn = document.getElementById("registerBtn");
 
 function userLogin() {
 
-    if (!loadUser.email === undefined && loadUser.password === undefined) {
+    if (!loadUser && !loadUser.email && !loadUser.password) {
         console.log("You need to create an account first")
     } else {
         window.location.href = '../pages/login.html'
