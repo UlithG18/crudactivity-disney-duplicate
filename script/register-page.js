@@ -33,7 +33,6 @@ function userCreate() {
 
     setUser(loadUser)
     window.location.href = '../pages/login.html'
-
 }
 
 function getUser() {
