@@ -26,7 +26,7 @@ function userRegister() {
         loadUser.email = userEmail
 
         setUser(loadUser)
-        window.location.href = '../pages/register.html'
+        window.location.href = './pages/register.html'
     }
 }
 
